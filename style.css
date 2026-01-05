@@ -1,0 +1,65 @@
+/* 基础设置 */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1525 100%);
+    overflow: hidden;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace; 
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* 中间口号容器 */
+.slogan-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    pointer-events: none;
+}
+
+/* 口号文字样式 */
+.slogan-text {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.4;
+    text-shadow: 0 0 15px #00FFC8, 0 0 30px #00FFC8, 0 0 50px #00FFC8, 0 0 70px #00FFC8;
+    background-color: rgba(10, 20, 35, 0.85); 
+    padding: 30px;
+    border: 2px solid #00FFC8;
+    box-shadow: 0 0 30px rgba(0, 255, 200, 0.6), inset 0 0 15px rgba(0,255,200,0.3);
+    border-radius: 12px;
+    animation: breathe 4s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%, 100% { 
+        opacity: 0.95; 
+        box-shadow: 0 0 30px rgba(0, 255, 200, 0.5); 
+    }
+    50% { 
+        opacity: 1; 
+        box-shadow: 0 0 60px rgba(0, 255, 200, 0.9); 
+    }
+}
+
+@media (max-width: 600px) {
+    .slogan-text {
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+}
+
+
